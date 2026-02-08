@@ -61,6 +61,9 @@ matchRouter.post("/", async (req, res) => {
         status: status ?? getMatchStatus(start, end),
       })
       .returning();
+      if(res.app.locals.broadCastMatchCreated){
+        res.app.locals.broadCastMatchCreated(event);
+      }
 
     return res.status(201).json({
       message: "Match created successfully",
