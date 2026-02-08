@@ -36,7 +36,4 @@ export const commentary = pgTable('commentary', {
 });
 
 // Export types for type-safe queries
-export type Match = typeof matches.$inferSelect;
-export type NewMatch = typeof matches.$inferInsert;
-export type Commentary = typeof commentary.$inferSelect;
-export type NewCommentary = typeof commentary.$inferInsert;
+
